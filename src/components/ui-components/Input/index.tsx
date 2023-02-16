@@ -1,5 +1,5 @@
 
-
+import { Input as InputN } from "@nextui-org/react";
 
 interface Props {
     placeholder?: string
@@ -10,7 +10,7 @@ export default function Input({name, type, placeholder}: Props){
 
     return (
         <div>
-            <input name={name} type={type} placeholder={placeholder}  />
+            <InputN name={name} type={type} placeholder={placeholder}  />
         </div>
     )
 }
