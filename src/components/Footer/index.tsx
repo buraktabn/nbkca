@@ -1,5 +1,8 @@
+import Link from "next/link";
 import Image from "../ui-components/Image";
 import Input from "../ui-components/Input";
+import { SendButton } from "./SendButton";
+import { SendIcon } from "./SendIcon";
 
 
 const Footer = () => {
@@ -10,16 +13,16 @@ const Footer = () => {
             <div className="container">
                 <div className="grid-3-columns">
                    
-                    <div>
+                    <div className="footer-first">
                         <div>
                             <Image src="" />
                         </div>
-                       <ul>
-                            <li><a>About</a></li>
-                            <li><a>Projects</a></li>
-                            <li><a>What We Do</a></li>
-                            <li><a>Services</a></li>
-                            <li><a>Jobs</a></li>
+                       <ul role="list" className="footer-list">
+                            <li role="listitem" className="footer-title2"><Link href="/about">About</Link></li>
+                            <li className="footer-title2"><Link href="/projects">Projects</Link></li>
+                            <li className="footer-title2"><Link href="/wedo">What We Do</Link></li>
+                            <li className="footer-title2"><Link href="/services">Services</Link></li>
+                            <li className="footer-title2"><Link href="/jobs">Jobs</Link></li>
                        </ul>
                     </div>
                     <div>
@@ -31,7 +34,14 @@ const Footer = () => {
                     <div>
                         <h4 className="contact-title">newsletter</h4>
                         <p style={{fontSize: "16px"}}>Subscribe our newsletter to get more free design course and resource </p>
-                        <Input name="" placeholder="Enter your email"  />
+                        <Input 
+                            name="email"
+                            placeholder="Enter your email"
+                            clearable
+                            contentRightStyling={false}
+                            contentRight={<SendButton>
+                                <SendIcon />
+                            </SendButton>} label={""} required={false}/>
                     </div>
                 </div>
             </div>

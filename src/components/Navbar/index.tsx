@@ -1,23 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Button, Link, Text, Card, Radio } from "@nextui-org/react";
 import { Layout } from "../Layout/";
 import Logo from "../Logo/";
+import { useRouter } from "next/router";
+import { menus } from "./menus";
+import Menu from "./Menu";
 
-export default function NavbarDefault() {
-  const [variant, setVariant] = React.useState("sticky");
+export default function NavbarDefault({type}: any) {
+  const [variant, setVariant] = useState("sticky");
+
+  const router = useRouter()
+
+  console.log("router: ", router)
 
   const variants = ["static", "floating", "sticky"];
+
+  const [ open, setOpen] = useState(true);
+  const handleOpen = () => setOpen((prev) => !prev)
+
+  if(type === "menu") {
+    return (
+      <>
+        <a href="/" className="template-logo w-inline-block">
+          <img 
+            style={{
+              transform: "rotate(3.142rad)"
+            }} 
+            src="https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b808cb414f6b3cd445e7eb_Z.png" 
+            loading="lazy" width="300" alt="" className="nbk-logo" 
+          />
+        </a>
+        <Menu open={open} handleOpen={handleOpen} />
+      </>
+    )
+  }
   
   return (
-      <Navbar isBordered variant={variant as any} style={{width: "100%"}}>
-        <Navbar.Brand>
+      <Navbar isBordered variant={variant as any} style={{width: "100%", background: "#000"}}>
+        <Navbar.Brand style={{paddingLeft: "60px"}}>
           <Logo name="NBKCA" />
         </Navbar.Brand>
-        <Navbar.Content hideIn="xs">
-          <Navbar.Link href="/about">About</Navbar.Link>
-          <Navbar.Link isActive href="#">Projects</Navbar.Link>
-          <Navbar.Link href="#">What We Do</Navbar.Link>
-          <Navbar.Link href="#">Press</Navbar.Link>
+        <Navbar.Content hideIn="xs" style={{margin: "auto"}}>
+          {menus?.map((menu, index) => <Navbar.Link className="nav-title" isActive={router.route === menu?.slug} key={index} href={menu?.slug}>{menu?.name}</Navbar.Link>)}
         </Navbar.Content>
         {/* <Navbar.Content>
           <Navbar.Link color="inherit" href="#">

@@ -1,7 +1,8 @@
 
-
-.nextui-navbar-container {
-  background: transparent !important
+:root {
+  background-color: #000;
+  background: #000;
 }
 
+@import "./next.css";
 @import "./theme.css";

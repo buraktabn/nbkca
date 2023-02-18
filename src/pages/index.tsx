@@ -13,6 +13,7 @@ import { app, posts, services, valuesItems, works } from '@/services/app'
 import Services from '@/components/Services'
 import FooterSec from '@/components/Footer/FooterSec'
 import HeroSlider from '@/components/Hero/Slider'
+import Process from '@/components/Process'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={"body-content"}>
-        <Navbar />
+        <Navbar type="menu" />
 
         <HeroSlider />
         
@@ -43,7 +44,7 @@ export default function Home() {
           />
         </section>
 
-        <section className="section inner wf-section">
+        <section className="section wf-section">
           <Clients />
         </section>
 
@@ -56,24 +57,8 @@ export default function Home() {
           />
         </section>
         
-
         <section className="section inner wf-section">
-          <ValuesCard 
-              title="Promise & Values"
-              label="We build possibilities."
-              description="We’ve built a team of in-house experts as well as a broad network of specialists so that we can deliver exactly what you need in creative solutions, technology, and materials. "
-              items={valuesItems}
-          />
-        </section>
-
-
-        <section className="section inner wf-section">
-          <ValuesCard 
-              title="Promise & Values"
-              label="We build possibilities."
-              description="We’ve built a team of in-house experts as well as a broad network of specialists so that we can deliver exactly what you need in creative solutions, technology, and materials. "
-              items={valuesItems}
-          />
+          <Process  />
         </section>
 
         <section className="section color wf-section">
@@ -85,7 +70,7 @@ export default function Home() {
         </section>
 
         <section className="section wf-section">
-          {/* <Qoute /> */}
+          <Qoute />
         </section>
 
         <Footer />

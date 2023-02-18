@@ -4,9 +4,17 @@ declare namespace Type {
 
     interface Work {
         id: string | number
+        slug: string
         title: string
         description: string
-        image: string
+        image: string,
+        options?: WorkOption[]
+        text?: string
+    }
+
+    interface WorkOption {
+        label: string
+        value: string
     }
 
     interface Service {

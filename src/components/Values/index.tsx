@@ -32,7 +32,7 @@ const Values = ({title, label, description, items}: {title: string, label: strin
                         <div> <h3 className="primary-title">Promise &amp; Values</h3> </div>
                     </div>
                     <div className="margin-50px">
-                        {items?.map((item: any) => ListItem(item))}
+                        {items?.map((item: any, index: any) => <ListItem key={index} {...item} />)}
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Button, styled } from '@nextui-org/react';
 
-const ButtonN = ({label, size, color, style}:{label: string, size: any, color: any, style: any}) => {
+const ButtonN = ({className, label, size, color, style}:{className?: string, label?: string, size?: any, color?: any, style?: any}) => {
     const MyStyledButton = styled(Button, {
         boxShadow: '$md', // shadows.md
         variants: {
@@ -35,7 +35,7 @@ const ButtonN = ({label, size, color, style}:{label: string, size: any, color: a
     });
 
     return (
-        <MyStyledButton auto size={size} color={color} style={style}> {label} </MyStyledButton>
+        <MyStyledButton className={className} auto size={size} color={color} style={style}> {label} </MyStyledButton>
     )
 }
 

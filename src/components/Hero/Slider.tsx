@@ -16,7 +16,9 @@ export default function HeroSlider(){
                 </div>
 
             </div>
-            <div className="hero-photo">
+            <div className="hero-photo" style={{
+                backgroundImage: `url('/images/30ebfbd2-b113-de0e-04ca-62149e5ae34d-e0473f29.png')`
+            }}>
                 {/* <img width={716} height={952} src="/images/30ebfbd2-b113-de0e-04ca-62149e5ae34d-e0473f29.png" /> */}
             </div>
         </div>

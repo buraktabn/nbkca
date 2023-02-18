@@ -13,11 +13,9 @@ export default function FooterSec(){
                     
                     </div>
                     <div className="footer-flex">
-                        <a href="/information/style-guide" className="read-more-link">F</a>
-                        <a href="/information/licensing" className="read-more-link">T</a>
-                        <a href="/information/licensing" className="read-more-link">I</a>
-                        <a href="/information/licensing" className="read-more-link">D</a>
-                        <a href="/information/licensing" className="read-more-link">B</a>
+                        <a href="https://facebook.com/" target="_blank" className="read-more-link" rel="noreferrer"><img src="/images/icons/facebook.png" /></a>
+                        <a href="https://twitter.com/" target="_blank" className="read-more-link" rel="noreferrer"><img src="/images/icons/twitter.png" /></a>
+                        <a href="https://instagram.com/" target="_blank" className="read-more-link" rel="noreferrer"><img src="/images/icons/instagram.png" /></a>
                     </div>
                 </div>
             </div>

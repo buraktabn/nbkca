@@ -34,27 +34,81 @@ const services: Type.Service[] = [
 const works: Type.Work[] = [
     {
         id: "1",
+        slug: "donec-rhoncus",
         title: "Donec mide",
         description: "Landscaping",
-        image: "https://assets.website-files.com/63b80132c70d8c034d473f37/63b83200d8362a7ba4b1befe_work-1.jpg"
+        image: "/images/work-1.jpeg",
+        options: [
+            {label: "Project Type", value: "Painting"},
+            {label: "Client", value: "halildogan"},
+            {label: "Completion Date", value: "March 2007"},
+            {label: "Project Size", value: "3350 Square Feet"},
+            {label: "Contract Value", value: "$720.000"},
+            {label: "Location", value: "Brooklyn, NY"},
+        ],
+        text: `<div>
+            <div className="w-richtext">
+                <h3>Intro</h3>
+                <p>Usually, the sites of institutions that provide financial services are full of information. Our goal was to provide the maximum of information to potential customers of Webflow, but to do it in a stylish and modern way. <br />
+                    <br />Minimalism combined with elements of french typography and brutalism helped us to realize the site exactly as we imagined with the client at the beginning: visually restrained, but stylish. Informative and pleasant to use, with an elegant aftertaste of a serious financial institution.
+                </p>
+            </div>
+        </div>
+        <div className="margin-20px">
+            <div className="w-richtext">
+            <h3>Quality</h3>
+            <p>Usually, the sites of institutions that provide financial services are full of information. Our goal was to provide the maximum of information to potential customers of Webflow, but to do it in a stylish and modern way. <br />
+                <br />Minimalism combined with elements of french typography and brutalism helped us to realize the site exactly as we imagined with the client at the beginning: visually restrained, but stylish. Informative and pleasant to use, with an elegant aftertaste of a serious financial institution.
+            </p>
+            <p>The sites of institutions that provide financial services are full of information. Our goal was to provide the maximum of information to potential customers of Webflow, but to do it in a stylish and modern way.</p>
+            <p>‍ <br />Combined with elements of french typography and brutalism helped us to realize the site exactly as we imagined with the client at the beginning: visually restrained, but stylish. Informative and pleasant to use, with an elegant aftertaste of a serious financial institution. </p>
+            </div>
+        </div>`
     },
     {
         id: "2",
+        slug: "etiam-rutrum",
         title: "Quisque rutrum",
         description: "Renovation",
-        image: "https://assets.website-files.com/63b80132c70d8c034d473f37/63b8332ca06cd90a7b090537_work-3.jpg"
+        image: "/images/work-3.jpeg",
+        options: [
+            {label: "Project Type", value: "Painting"},
+            {label: "Client", value: "halildogan"},
+            {label: "Completion Date", value: "March 2007"},
+            {label: "Project Size", value: "3350 Square Feet"},
+            {label: "Contract Value", value: "$720.000"},
+            {label: "Location", value: "Brooklyn, NY"},
+        ]
     },
     {
         id: "3",
+        slug: "etiam-rhoncus",
         title: "Etiam rhoncus",
         description: "Painting",
-        image: "https://assets.website-files.com/63b80132c70d8c034d473f37/63b833f53fdc60a939fd8fd0_work-2.jpg"
+        image: "/images/work-2.jpeg",
+        options: [
+            {label: "Project Type", value: "Painting"},
+            {label: "Client", value: "halildogan"},
+            {label: "Completion Date", value: "March 2007"},
+            {label: "Project Size", value: "3350 Square Feet"},
+            {label: "Contract Value", value: "$720.000"},
+            {label: "Location", value: "Brooklyn, NY"},
+        ]
     },
     {
         id: "4",
+        slug: "etiam-magna",
         title: "Proin magna",
         description: "Gardening",
-        image: "https://assets.website-files.com/63b80132c70d8c034d473f37/63b83483f296f73311f85ac1_work-4.jpg"
+        image: "/images/work-4.jpeg",
+        options: [
+            {label: "Project Type", value: "Painting"},
+            {label: "Client", value: "halildogan"},
+            {label: "Completion Date", value: "March 2007"},
+            {label: "Project Size", value: "3350 Square Feet"},
+            {label: "Contract Value", value: "$720.000"},
+            {label: "Location", value: "Brooklyn, NY"},
+        ]
     }
 ];
 

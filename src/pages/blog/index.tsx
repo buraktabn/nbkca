@@ -3,10 +3,6 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import ValuesCard from '@/components/Values'
-import Clients from '@/components/Clients'
-import Works from '@/components/Works'
-import YellowArea from '@/components/YellowArea'
 import Posts from '@/components/Posts'
 import Qoute from '@/components/Qoute'
 import Services from '@/components/Services'
@@ -15,7 +11,6 @@ import HeroSecond from '@/components/Hero/Second'
 
 import { app, posts, services, valuesItems, works } from '@/services/app'
 import HeroMain from '@/components/Hero/Main'
-
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,18 +24,16 @@ export default function Blog() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={"body-content"}>
-        <Navbar />
-
+        <Navbar type="menu"/>
         <HeroMain />
-
         <div className="section wf-section">
           <Posts items={posts} />
         </div>
-
+        <section className="section wf-section">
+          <Qoute />
+        </section>
         <Footer />
-
         <FooterSec />
-
       </main>
     </>
   )

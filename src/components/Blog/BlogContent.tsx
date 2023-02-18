@@ -9,7 +9,7 @@ export default function BlogContent({text}: any){
                 <div>
                     <div style={{opacity: 1}} className="w-richtext" dangerouslySetInnerHTML={{ __html: text}} />
                     <div className="margin-30px">
-                        <a href="/pages/blog" className="button w-button">Back to Blog</a>
+                        <a href="/blog" className="button w-button">Back to Blog</a>
                     </div>
                 </div>
             </div>

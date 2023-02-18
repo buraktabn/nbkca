@@ -1,8 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Grid } from "@nextui-org/react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Button from "../Button";
 import Image from "../Image";
 
-interface Props {
+interface Props extends Type.Work {
     title: string
     description: string
     image: string
@@ -10,7 +13,9 @@ interface Props {
 
 export default function WorkCard(props: Props){
 
-    let {title, image, description}:{title: string, image: string, description: string} = props;
+    const router = useRouter()
+
+    let {title, slug, image, description} = props;
 
     return (
         <div role="listitem" className="w-dyn-item">
@@ -24,7 +29,7 @@ export default function WorkCard(props: Props){
                         <p className="category">Landscaping</p>
                     </div>
                     <div>
-                        <div className="button">View Project</div>
+                        <Link className="button" href={`/project/${slug}`}>View Project</Link>
                     </div>
                 </div>
             </a>

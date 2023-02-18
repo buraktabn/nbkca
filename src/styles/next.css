@@ -1,0 +1,19 @@
+.nextui-navbar-container {
+    background: #000 !important
+  }
+  .nextui-input-main-container {
+    width: 100%
+  }
+  .nextui-input-block-label {
+    color: var(--nextui--inputPlaceholderColor);
+    font-size: 12px;
+    font-weight: 700;
+  
+  }
+  
+  .nextui-input-content {
+    width: 25px
+  }
+  .footer-first .footer-list .footer-title2 a {
+    color: hsla(0, 0%, 100%, 0.45)
+  }

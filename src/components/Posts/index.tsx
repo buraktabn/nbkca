@@ -19,7 +19,7 @@ const Posts = ({limit, title, items}: Props) => {
         <div className="margin-60px">
             <div className="w-dyn-list">
                 <div role="list" className="blog-grid w-dyn-items">
-                    {items?.slice(0, limit || items.length).map((item) => PostItem(item))}
+                    {items?.slice(0, limit || items.length).map((item, index) => <PostItem key={index} item={item} />)}
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ const Posts = ({limit, title, items}: Props) => {
     )
 }
 
-function PostItem(item: Type.Post){
+function PostItem({item}: {item: Type.Post}){
 
     let { title, slug, image, created, category } = item;
 

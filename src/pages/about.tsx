@@ -28,7 +28,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={"body-content"}>
-        <Navbar />
+        <Navbar type="menu"/>
 
         <HeroSecond />
 

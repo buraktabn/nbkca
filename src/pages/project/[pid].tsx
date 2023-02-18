@@ -20,48 +20,55 @@ import HeroImage from '@/components/Hero/Image'
 import BlogContent from '@/components/Blog/BlogContent'
 import BlogOther from '@/components/Blog/BlogOther'
 import { useRouter } from 'next/router'
+import HeroThird from '@/components/Hero/Third'
+import ProjectContent from '@/components/Project/ProjectContent'
+import ProjectOther from '@/components/Project/ProjectOther'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Blog() {
+export default function Project() {
 
   const router = useRouter();
 
   let { pid } = router.query;
 
   console.log("router: ", router)
-    let post = posts.find((post) => post.slug === pid)
+    let project = works.find((project) => project.slug === pid)
 
-    if(!post || !pid) {
+    if(!project || !pid) {
         return (
-            <p>Post not found!</p>
+            <p>project not found!</p>
         )
     }
     return (
         <>
             <Head>
-                <title>{post?.title} | {app.brand.title}</title>
-                <meta name="description" content={post?.description} />
+                <title>{project?.title} | {app.brand.title}</title>
+                <meta name="description" content={project?.description} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={"body-content"}>
                 <Navbar type="menu"/>
-                <HeroImage title={post.created} description={post.title} image={post.image} />
+
+                <HeroThird title={project.title} description={project.title} image={project.image} options={project?.options} />
+
                 <div className="page-content">
                     <div className="section wf-section">
-                      <BlogContent text={post.text} />
+                        <ProjectContent text={project.text} />
                     </div>
                     <div className="section gray wf-section">
-                      <BlogOther title="OTHER NEWS"/>
+                      <ProjectOther title="RELATED WORK"/>
                     </div>
+
                     <section className="section wf-section">
                         <Qoute />
                     </section>
+
                     <Footer />
                     <FooterSec />
-                </div>          
+                </div>
             </main>
         </>
     )

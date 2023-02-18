@@ -17,14 +17,14 @@ export default function Services(props: Props) {
 
         <div className="container">
             <div className="services-grid">
-                {services?.map((service: Type.Service) => Service(service))}
+                {services?.map((service: Type.Service, index) => <Service key={index} service={service} />)}
             </div>
         </div>
     )
 }
 
 
-function Service(service: Type.Service){
+function Service({service}:{service: Type.Service}){
 
     let { title, description, image} = service;
 
