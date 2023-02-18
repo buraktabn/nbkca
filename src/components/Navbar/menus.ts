@@ -12,7 +12,12 @@ export let menus = [{
     slug: "/wedo",
     name: "What We Do",
   },{
-    id: "press",
-    slug: "/press",
-    name: "Press",
-  },];
+    id: "news",
+    slug: "/news",
+    name: "News",
+  },{
+    id: "contact",
+    slug: "/contact",
+    name: "Contact",
+  },
+];

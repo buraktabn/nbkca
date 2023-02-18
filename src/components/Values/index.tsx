@@ -1,4 +1,5 @@
 import { Grid } from "@nextui-org/react";
+import Image from "../ui-components/Image";
 import Title, {ContainerTitle} from "../ui-components/Title";
 import Typography from "../ui-components/Typography";
 
@@ -9,20 +10,27 @@ const Values = ({title, label, description, items}: {title: string, label: strin
         <div className="main-grid">
             <div className="about-image-wrapper">
                 <div className="image-element">
-                    <img 
+                    <Image 
                         src="/images/cards/1.png" 
                         loading="lazy" 
                         sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, 40vw" 
                         alt="" className="image" />
                 </div>
                 <div className="image-element">
-                    <img 
-                        src="https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b825eb7ab76557b8a21921_photo-2.jpg" 
+                    <Image 
+                        src="/images/cards/photo-2.jpeg" 
                         loading="lazy" 
                         sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, 40vw" 
-                        srcSet="https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b825eb7ab76557b8a21921_photo-2-p-500.jpg 500w, https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b825eb7ab76557b8a21921_photo-2-p-800.jpg 800w, https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b825eb7ab76557b8a21921_photo-2-p-1080.jpg 1080w, https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b825eb7ab76557b8a21921_photo-2.jpg 1572w" 
                         alt="" 
                         className="image" />
+                </div>
+                <div className="image-element">
+                    <Image 
+                        src="/images/cards/photo-3.jpeg" 
+                        loading="lazy" 
+                        sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, 40vw" 
+                        alt="" className="image" 
+                    />
                 </div>
             </div>
             <div className="sticky-100vh">
