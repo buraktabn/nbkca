@@ -13,8 +13,6 @@ export default function NavbarDefault({type}: any) {
 
   const router = useRouter()
 
-  console.log("router: ", router)
-
   const variants = ["static", "floating", "sticky"];
 
   const [ open, setOpen] = useState(true);

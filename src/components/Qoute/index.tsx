@@ -4,10 +4,7 @@ import Input from "../ui-components/Input";
 import Textarea from "../ui-components/Textarea";
 
 const Qoute = () => {
-
-
     return (
-       
         <div className="container">
             <div className="grid-2-columns">
               

@@ -15,7 +15,6 @@ interface Props {
     contentRight?: React.ReactNode;
     contentRightStyling?: boolean
     clearable: any
-
 }
 export default function Input(props: Props){
 

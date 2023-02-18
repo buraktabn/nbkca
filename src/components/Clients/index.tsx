@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Image from "../ui-components/Image";
 
-
-
 const Clients = () => {
-
 
     return (
         <div className="container">
