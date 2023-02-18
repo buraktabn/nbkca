@@ -17,11 +17,11 @@ interface Props {
     clearable: any
 
 }
-export default function Input({value, label, className, name, type, placeholder, required, contentRight}: Props, props: Props){
+export default function Input(props: Props){
 
     return (
         <div style={{width: "100%"}}>
-            <InputN value={value} label={label} className={className} name={name} type={type} placeholder={placeholder} contentRight={contentRight} style={{width: "100%"}}  {...props}  />
+            <InputN style={{width: "100%"}}  {...props}  />
         </div>
     )
 }

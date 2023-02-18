@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function BlogContent({text}: any){
@@ -9,7 +10,7 @@ export default function BlogContent({text}: any){
                 <div>
                     <div style={{opacity: 1}} className="w-richtext" dangerouslySetInnerHTML={{ __html: text}} />
                     <div className="margin-30px">
-                        <a href="/blog" className="button w-button">Back to Blog</a>
+                        <Link href="/blog" className="button w-button">Back to Blog</Link>
                     </div>
                 </div>
             </div>

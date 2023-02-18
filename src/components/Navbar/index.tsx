@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState } from "react";
 import { Navbar, Button, Link, Text, Card, Radio } from "@nextui-org/react";
 import { Layout } from "../Layout/";

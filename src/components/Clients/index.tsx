@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+import Image from "../ui-components/Image";
 
 
 
@@ -20,7 +22,7 @@ const Clients = () => {
 
                         color: "#777E91",
                         }}>
-                        As you might expect of a company that began as a high-end interiors contractor, we pay strict attention to the smallest details. As we've grown and evolved into a general contractor, our commitment to exceptional quality has never wavered. 
+                        As you might expect of a company that began as a high-end interiors contractor, we pay strict attention to the smallest details. As we`ve grown and evolved into a general contractor, our commitment to exceptional quality has never wavered. 
                     </div>
 
                 </div>
@@ -64,7 +66,7 @@ const Clients = () => {
                                     height: "48px",
                                     background: "#45B36B",
                                     borderRadius: "25px"
-                                }}><img src="" /></div>
+                                }}><Image src="" /></div>
                                 <div>
                                 <p style={{
                                     fontWeight: 500,
@@ -72,7 +74,7 @@ const Clients = () => {
                                     lineHeight: "24px",
 
                                     color: "#FCFCFD"
-                                }}>Isabelle O'Conner</p>
+                                }}>Isabelle O`Conner</p>
                                 <p style={{
                                     fontWeight: 400,
                                     fontSize: "14px",

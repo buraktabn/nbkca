@@ -5,7 +5,6 @@ export const SendButton = styled('button', {
   background: 'transparent',
   border: 'none',
   padding: 0,
-  margin: 0,
   // styles
   width: '38px',
   height: '24px',
