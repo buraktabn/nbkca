@@ -12,7 +12,7 @@ export default function Process(){
                     <div className="process-subtitle">
                         Success comes from process 
                     </div>
-                    <div style={{
+                    <div className="process-image" style={{
                         background: "url(/images/abstract-minimalistic-background.png), url(/images/abstract-minimalistic-background.png)",
                     }}>
                     </div>
