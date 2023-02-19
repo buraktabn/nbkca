@@ -13,7 +13,7 @@ export let menus = [{
     name: "What We Do",
   },{
     id: "news",
-    slug: "/news",
+    slug: "/blog",
     name: "News",
   },{
     id: "contact",
