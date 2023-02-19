@@ -11,10 +11,9 @@ export default function HeroSlider(){
                     <h1 className="title-1">Build.<br /><span className="image-span"><br /></span>Invest. Innovate.</h1>
                 </div>
                 <div style={{width: "100%", display: "flex"}}>
-                    <Button label="Contact us" size="" color="" style={{ border: "1px #1A1B1F inset"}}  />
-                    <Button label="Our Services" size="" color="" style={{marginLeft: "15px", border: "1px #1A1B1F inset"}} />
+                    <Button label="Contact us" size="lg" color="" style={{ border: "1px #1A1B1F inset"}}  />
+                    <Button label="Our Services" size="lg" color="" style={{marginLeft: "15px", border: "1px #1A1B1F inset"}} />
                 </div>
-
             </div>
             <div className="hero-photo" style={{
                 backgroundImage: `url('/images/30ebfbd2-b113-de0e-04ca-62149e5ae34d-e0473f29.png')`

@@ -5,12 +5,12 @@ const ButtonN = ({className, label, size, color, style}:{className?: string, lab
     const MyStyledButton = styled(Button, {
         boxShadow: '$md', // shadows.md
         variants: {
-            size: {
-                mysize: {
-                    height: '$12', // space[12]
-                    borderRadius: '$xs' // radii.xs
-                }
-            },
+            // size: {
+            //     mysize: {
+            //         height: '$12', // space[12]
+            //         borderRadius: '$xs' // radii.xs
+            //     }
+            // },
             color: {
                 [color]: {
                     background: '#1A1B1F', // colors.green800
