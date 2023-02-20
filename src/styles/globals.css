@@ -4,6 +4,12 @@
   background: #000;
 }
 
+.hd-image {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
   
 @import "./process.css";
 @import "./next.css";

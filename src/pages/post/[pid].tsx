@@ -13,49 +13,38 @@ import Services from '@/components/Services'
 import FooterSec from '@/components/Footer/FooterSec'
 import HeroSecond from '@/components/Hero/Second'
 
-import { app, posts, services, valuesItems, works } from '@/services/app'
+import { app, services, valuesItems, works } from '@/services/app'
 import HeroMain from '@/components/Hero/Main'
 import HeroMega from '@/components/Hero/Mega'
 import HeroImage from '@/components/Hero/Image'
 import BlogContent from '@/components/Blog/BlogContent'
 import BlogOther from '@/components/Blog/BlogOther'
 import { useRouter } from 'next/router'
+import { getPosts, urlFor } from '@/lib/sanity'
+import moment from 'moment'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Blog() {
+export default function Post({post, posts}: {post: Type.Post, posts: Type.Post[]}) {
 
-  const router = useRouter();
-
-  let { pid } = router.query;
-
-  console.log("router: ", router)
-    let post = posts.find((post) => post.slug === pid)
-
-    if(!post || !pid) {
-        return (
-            <p>Post not found!</p>
-        )
-    }
+    let { coverImage } = post;
     return (
         <>
             <Head>
                 <title>{post?.title} | {app.brand.title}</title>
-                <meta name="description" content={post?.description} />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <meta name="description" content={post?.excerpt} />
             </Head>
             <main className={"body-content"}>
                 <Navbar type="menu"/>
-                <HeroImage title={post.created} description={post.title} image={post.image} />
+                <HeroImage title={moment(post.date).format('ll')} description={post.title} image={urlFor(coverImage?.asset._ref as string).auto('format').fit('max').width(460).height(370).toString()} />
                 <div className="page-content">
                     <div className="section wf-section">
-                      <BlogContent text={post.text} />
+                      <BlogContent text={post.excerpt} />
                     </div>
-                    <div className="section gray wf-section">
-                      <BlogOther title="OTHER NEWS"/>
-                    </div>
+                    {posts.length > 0 && <div className="section gray wf-section">
+                     <BlogOther title="OTHER NEWS" posts={posts}/>
+                    </div>}
                     <section className="section wf-section">
                         <Qoute />
                     </section>
@@ -66,3 +55,20 @@ export default function Blog() {
         </>
     )
 }
+
+
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    const paths = posts.map((post: Type.Post) => ({
+      params: { pid: post.slug.current },
+    }));
+    return { paths, fallback: false };
+  }
+  
+  export async function getStaticProps({ params }: any) {
+    let { pid } = params;
+    let posts = await getPosts();
+    let post = posts.find((post: Type.Post) => post.slug.current === pid);
+    posts = (() => posts?.filter((post: Type.Post) => post.slug.current !== pid))();
+    return { props: { post, posts } }
+  }

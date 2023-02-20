@@ -1,3 +1,5 @@
+import { urlFor } from "@/lib/sanity";
+import moment from "moment";
 import Image from "../ui-components/Image";
 
 interface Props {
@@ -29,7 +31,7 @@ const Posts = ({limit, title, items}: Props) => {
 
 function PostItem({item}: {item: Type.Post}){
 
-    let { title, slug, image, created, category } = item;
+    let { title, slug, coverImage, date, category } = item;
 
     return (
         <div role="listitem" className="w-dyn-item">
@@ -38,23 +40,23 @@ function PostItem({item}: {item: Type.Post}){
                 transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`, 
                 transformStyle: `preserve-3d`,
             }}>
-                <a href="#" className="blog-image w-inline-block">
+                <a href="#" className="blog-image w-inline-block hd-image">
                     <Image 
-                        src={image} 
+                        src={urlFor(coverImage?.asset._ref as string).auto('format').fit('max').width(460).height(370).toString()} 
                         loading="lazy" 
                         alt="" 
-                        sizes="(max-width: 991px) 90vw, 43vw" 
+                        sizes="(max-width: 991px) 90vw, 43vw"
                         className="blog-image" />
                 </a>
                 <div className="blog-content">
                     <div>
                         <a href={`/post-category/${category}`} className="category-tag">{category}</a>
                     </div>
-                        <a href={`/post/${slug}`} className="blog-title">{title}</a>
+                        <a href={`/post/${slug?.current}`} className="blog-title">{title}</a>
                     <div className="margin-20px">
                         <div className="flex-blog-small">
-                            <a href={`/post/${slug}`} className="read-more-link">Read More</a>
-                            <p className="category _1">{created}</p>
+                            <a href={`/post/${slug?.current}`} className="read-more-link">Read More</a>
+                            <p className="category _1">{moment(date).format("ll")}</p>
                             </div>
                         </div>
                     </div>

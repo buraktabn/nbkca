@@ -9,15 +9,19 @@ import Works from '@/components/Works'
 import YellowArea from '@/components/YellowArea'
 import Posts from '@/components/Posts'
 import Qoute from '@/components/Qoute'
-import { app, posts, services, valuesItems, works } from '@/services/app'
+import { app, services, valuesItems, works } from '@/services/app'
 import Services from '@/components/Services'
 import FooterSec from '@/components/Footer/FooterSec'
 import HeroSlider from '@/components/Hero/Slider'
 import Process from '@/components/Process'
+import { getPosts } from '@/lib/sanity'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({posts}:{posts: Type.Post[]}) {
+
+  posts.length = 2;
+  
   return (
     <>
       <Head>
@@ -80,4 +84,10 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+
+export async function getStaticProps({ params }: any) {
+  const posts = await getPosts();
+  return { props: { posts } }
 }

@@ -9,7 +9,7 @@ import Services from '@/components/Services'
 import FooterSec from '@/components/Footer/FooterSec'
 import HeroSecond from '@/components/Hero/Second'
 
-import { app, posts, services, valuesItems, works } from '@/services/app'
+import { app, services, valuesItems, works } from '@/services/app'
 import HeroMain from '@/components/Hero/Main'
 
 const inter = Inter({ subsets: ['latin'] })

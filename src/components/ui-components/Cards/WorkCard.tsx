@@ -19,7 +19,7 @@ export default function WorkCard(props: Props){
 
     return (
         <div role="listitem" className="w-dyn-item">
-            <a style={{opacity: 1}} className="portfolio-wrapper w-inline-block">
+            <div style={{opacity: 1}} className="portfolio-wrapper w-inline-block">
                 <div>
                     {image && <Image className="work-image" src={image} style={{}} />}
                 </div>
@@ -32,7 +32,7 @@ export default function WorkCard(props: Props){
                         <Link className="button" href={`/project/${slug}`}>View Project</Link>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { posts, works } from "@/services/app";
+import { works } from "@/services/app";
 import Posts from "../Posts";
 import Works from "../Works";
 

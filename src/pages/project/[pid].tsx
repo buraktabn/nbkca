@@ -13,7 +13,7 @@ import Services from '@/components/Services'
 import FooterSec from '@/components/Footer/FooterSec'
 import HeroSecond from '@/components/Hero/Second'
 
-import { app, posts, services, valuesItems, works } from '@/services/app'
+import { app, services, valuesItems, works } from '@/services/app'
 import HeroMain from '@/components/Hero/Main'
 import HeroMega from '@/components/Hero/Mega'
 import HeroImage from '@/components/Hero/Image'

@@ -30,16 +30,27 @@ declare namespace Type {
         icon: string
     }
 
+    interface Slug {
+        current: string
+    }
+
+    interface CoverImageAsset {
+        _ref: string
+    }
+
+    interface CoverImage {
+        asset: CoverImageAsset
+    }
+
     interface Post {
         id: string | number
         title: string
-        slug: string
-        description?: string
-        image?: string
+        slug: Slug
+        excerpt?: string
+        coverImage?: CoverImage
         category?: string
-        created?: string
+        date?: string
         text?: string
     }
-
 
 }
