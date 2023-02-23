@@ -31,8 +31,6 @@ const Posts = ({limit, title, items}: Props) => {
 
 function PostItem({item}: {item: Type.Post}){
 
-    let { title, slug, coverImage, date, category } = item;
-
     return (
         <div role="listitem" className="w-dyn-item">
             <div style={{
@@ -42,7 +40,7 @@ function PostItem({item}: {item: Type.Post}){
             }}>
                 <a href="#" className="blog-image w-inline-block hd-image">
                     <Image 
-                        src={urlFor(coverImage?.asset._ref as string).auto('format').fit('max').width(460).height(370).toString()} 
+                        src={item?.coverImage ? urlFor(item?.coverImage?.asset._ref as string).auto('format').fit('max').width(460).height(370).toString() : ""} 
                         loading="lazy" 
                         alt="" 
                         sizes="(max-width: 991px) 90vw, 43vw"
@@ -50,16 +48,16 @@ function PostItem({item}: {item: Type.Post}){
                 </a>
                 <div className="blog-content">
                     <div>
-                        <a href={`/post-category/${category}`} className="category-tag">{category}</a>
+                        <a href={`/post-category/${item?.category}`} className="category-tag">{item?.category}</a>
                     </div>
-                        <a href={`/post/${slug?.current}`} className="blog-title">{title}</a>
+                        <a href={`/post/${item?.slug?.current}`} className="blog-title">{item?.title}</a>
                     <div className="margin-20px">
                         <div className="flex-blog-small">
-                            <a href={`/post/${slug?.current}`} className="read-more-link">Read More</a>
-                            <p className="category _1">{moment(date).format("ll")}</p>
-                            </div>
+                            <a href={`/post/${item?.slug?.current}`} className="read-more-link">Read More</a>
+                            <p className="category _1">{moment(item?.date).format("ll")}</p>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     )
