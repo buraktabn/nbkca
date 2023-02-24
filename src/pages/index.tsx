@@ -61,7 +61,7 @@ export default function Home({posts}:{posts: Type.Post[]}) {
           />
         </section>
         
-        <section className="section inner wf-section">
+        <section className="section wf-section">
           <Process  />
         </section>
 

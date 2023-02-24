@@ -5,8 +5,10 @@ export default function Process(){
         <div className="container">
             <div className="grid-2-columns">
                 <div className="margin-40px" style={{margin:"55px 0 "}}>
-                    <div style={{marginBottom: "15px"}}>
-                        <h3 className="primary-title">Promise & Values</h3>
+                
+                    <div className="primary-wrapper">
+                        <div className="h-line"></div>
+                        <div> <h3 className="primary-title">Promise &amp; Values</h3> </div>
                     </div>
                     <div className="h-line"></div>
                     <div className="process-subtitle">

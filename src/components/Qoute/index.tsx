@@ -10,10 +10,13 @@ const Qoute = () => {
               
                 <div >
                     <div className="margin-40px" style={{marginBottom:"40px"}}>
-                        <div>
-                            <h3 className="primary-title">NEED A QUOTE</h3>
-                        </div>
+                        <div className="primary-wrapper">
                         <div className="h-line"></div>
+                            <div>
+                                <h3 className="primary-title">NEED A QUOTE</h3>
+                            </div>
+                   
+                        </div>
 
                     </div>
                     <div className="primary-wrapper">

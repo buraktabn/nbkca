@@ -5,10 +5,8 @@
 
 export default function ServiceList({services}: any){
 
-
-    let left = [...services];
-    let right = [...services]
-
+    let left = [...services.filter((s: any, index: any) => [0, 2, 4, 5, 6].includes(index))]
+    let right = [...services.filter((s: any, index: any) => [1, 3, 5, 7, 9].includes(index))]
 
     return (
         <div className="container">
