@@ -61,7 +61,9 @@ export default function Home({posts}:{posts: Type.Post[]}) {
           />
         </section>
         
-        <section className="section wf-section">
+        <section className="section wf-section" style={{
+          backgroundColor: "#101013"
+        }}>
           <Process  />
         </section>
 

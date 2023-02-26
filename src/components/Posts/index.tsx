@@ -38,7 +38,7 @@ function PostItem({item}: {item: Type.Post}){
                 transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`, 
                 transformStyle: `preserve-3d`,
             }}>
-                <a href="#" className="blog-image w-inline-block hd-image">
+                <a href={`/post/${item?.slug?.current}`} className="blog-image w-inline-block hd-image">
                     <Image 
                         src={item?.coverImage ? urlFor(item?.coverImage?.asset._ref as string).auto('format').fit('max').width(460).height(370).toString() : ""} 
                         loading="lazy" 

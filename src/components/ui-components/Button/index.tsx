@@ -16,10 +16,14 @@ const ButtonN = ({className, label, size, color, style}:{className?: string, lab
                     background: '#1A1B1F', // colors.green800
                     color: '#FFF', 
                     border: '1px #1A1B1F inset',
+           
                     '&:hover': {
-                        background: '#000000',
-                        border: '1px #FFF inset',
-                        color: '#fff',
+                        backgroundColor: "hsl(0deg 0% 15%)",
+                        color: "#FFF",
+                        borderColor: "hsl(0deg 0% 15%)",
+                        // border: '1px #FFF inset',
+                        // color: '#fff',
+                        boxShadow: "0 4px 0 0 #252525",
                     },
                     '&:active': {
                         background: '$green200',
