@@ -26,7 +26,7 @@ export default function NavbarDefault({type}: any) {
             style={{
               transform: "rotate(3.142rad)"
             }} 
-            src="https://assets.website-files.com/63b80132c70d8cb5d1473f05/63b808cb414f6b3cd445e7eb_Z.png" 
+            src="/images/logo.png"
             loading="lazy" width="300" alt="" className="nbk-logo" 
           />
         </a>
