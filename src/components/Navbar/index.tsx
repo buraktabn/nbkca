@@ -23,9 +23,6 @@ export default function NavbarDefault({type}: any) {
       <>
         <a href="/" className="template-logo w-inline-block">
           <img 
-            style={{
-              transform: "rotate(3.142rad)"
-            }} 
             src="/images/logo.png"
             loading="lazy" width="300" alt="" className="nbk-logo" 
           />
