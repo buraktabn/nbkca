@@ -1529,9 +1529,7 @@
    }
    
    .nbk-logo {
-     width: 20px;
-     -webkit-filter: invert(100%);
-     filter: invert(100%);
+     width: 46px;
    }
    
    .social-overlay {
